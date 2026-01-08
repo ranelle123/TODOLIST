@@ -1,0 +1,130 @@
+﻿:root {
+    --primary-color: #4a90e2;
+    --success-color: #27ae60;
+    --danger-color: #e74c3c;
+    --bg-color: #f8f9fa;
+    --text-color: #2d3436;
+    --card-bg: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 40px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+
+#taskForm {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+}
+
+button#addBtn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button#addBtn:hover {
+    background-color: #357abd;
+    transform: translateY(-2px);
+}
+
+/* Grille de cartes */
+#taskList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid var(--primary-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.card h3 { margin: 0 0 5px 0; color: #333; }
+.card h4 { margin: 0 0 10px 0; color: #666; font-size: 0.9em; font-weight: normal; }
+.card p { font-size: 14px; color: #444; flex-grow: 1; }
+.card small { color: #888; margin-bottom: 15px; }
+
+ 
+.card.completed {
+    border-left-color: var(--success-color);
+    background-color: #f0fff4;
+    opacity: 0.8;
+}
+
+.card.completed h3 {
+    text-decoration: line-through;
+    color: #888;
+}
+ 
+.card button {
+    background: transparent;
+    color: var(--danger-color);
+    border: 1px solid var(--danger-color);
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    align-self: flex-end;
+    transition: all 0.2s;
+}
+
+.card button:hover {
+    background: var(--danger-color);
+    color: white;
+}
+
+       
+.card input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}

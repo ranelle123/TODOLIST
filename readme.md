@@ -1,5 +1,9 @@
 # Gestionnaire de Tâches - BTS SIO
 
+
+## 🌐 Lien du site en direct
+[Cliquez ici pour voir l'application](https://ranelle123.github.io/TODOLIST/)
+
 ## Description
 Application web permettant de créer, gérer et supprimer des tâches. 
 Ce projet a été réalisé dans le cadre de l'évaluation HTML/CSS/JS.

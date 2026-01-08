@@ -15,3 +15,4 @@ Ce projet a été réalisé dans le cadre de l'évaluation HTML/CSS/JS.
 - **CSS3** : Mise en page.
 - **JavaScript** : Manipulation du DOM et gestion des événements.
 
+
